@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import javax.ws.rs.core.UriInfo;
+import jakarta.ws.rs.core.UriInfo;
 
 import net.sf.mmm.util.reflect.api.GenericType;
 import net.sf.mmm.util.reflect.base.ReflectionUtilImpl;
@@ -47,6 +47,7 @@ public class JavaDocHelperTest
 {
     /** Dummy JavaDoc URL for testing. */
     public static final String JAVADOC_URL = "http://localhost/apidocs";
+    public static final String JAKARTA_RS_WS_JAVADOC_URL = "https://jakarta.ee/specifications/restful-ws/3.0/apidocs";
 
     private JavaDocHelper createJavaDocHelper( JavaProjectBuilder builder )
     {
@@ -95,7 +96,7 @@ public class JavaDocHelperTest
     {
         String parsedJavaDoc = parseMethodJavaDoc( "testLinkJeeClass" );
         String expected =
-            "Test of <code><a href='" + JavaDocHelper.JAVADOC_JAVAEE_URL + "/javax/ws/rs/core/UriInfo.html'>"
+            "Test of <code><a href='" + JAKARTA_RS_WS_JAVADOC_URL + "/jakarta/ws/rs/core/UriInfo.html'>"
                 + "link tag to JEE class</a></code>.";
         assertThat( parsedJavaDoc ).isEqualTo( expected );
     }

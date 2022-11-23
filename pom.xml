@@ -26,7 +26,7 @@
     <artifactId>mojo-parent</artifactId>
     <version>61</version>
   </parent>
-  <artifactId>servicedocgen-maven-plugin</artifactId>
+  <artifactId>servicedocgen-maven-plugin-jakarta</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   <name>Maven Service Documentation Generator Plugin</name>
@@ -82,14 +82,14 @@
       <version>2.0-M3</version>
     </dependency>
     <dependency>
-      <groupId>javax.ws.rs</groupId>
-      <artifactId>javax.ws.rs-api</artifactId>
-      <version>2.0</version>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
+      <version>3.1.0</version>
     </dependency>
     <dependency>
-      <groupId>javax.validation</groupId>
-      <artifactId>validation-api</artifactId>
-      <version>1.1.0.Final</version>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+      <version>3.0.2</version>
     </dependency>
     <dependency>
       <groupId>net.sf.m-m-m</groupId>
@@ -246,16 +246,9 @@
   </ciManagement>
   <distributionManagement>
     <repository>
-      <id>ossrh-staging</id>
-      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-    </repository>
-    <snapshotRepository>
-      <id>ossrh-snapshots</id>
-      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <site>
       <id>github</id>
-      <url>scm:git:ssh://git@github.com/mojohaus/servicedocgen-maven-plugin.git</url>
-    </site>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/elcallio/servicedocgen-maven-plugin</url>
+    </repository>
   </distributionManagement>
 </project>

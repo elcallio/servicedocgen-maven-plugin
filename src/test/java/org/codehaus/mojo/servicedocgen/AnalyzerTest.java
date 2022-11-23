@@ -22,7 +22,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 import org.apache.maven.plugin.logging.SystemStreamLog;
 import org.assertj.core.api.Assertions;

@@ -31,7 +31,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-import javax.ws.rs.Path;
+import jakarta.ws.rs.Path;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.maven.plugin.AbstractMojo;
