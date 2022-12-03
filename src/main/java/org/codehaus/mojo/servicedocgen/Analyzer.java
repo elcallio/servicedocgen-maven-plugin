@@ -165,7 +165,7 @@ public class Analyzer
             descriptor = ServicesDescriptor.createDefault();
         }
         this.descriptor = descriptor;
-        this.pojoDescriptorBuilderFactory = PojoDescriptorBuilderFactoryImpl.getInstance();
+        this.pojoDescriptorBuilderFactory = new LocalPojoDescriptorFactoryImpl();//PojoDescriptorBuilderFactoryImpl.getInstance();
         if ( introspectFields )
         {
             this.pojoDescriptorBuilder = this.pojoDescriptorBuilderFactory.createPrivateFieldDescriptorBuilder();
@@ -958,7 +958,7 @@ public class Analyzer
 
     private String getSchemaAsString( String type )
     {
-        PojoDescriptorBuilderFactory pojoDescriptorBuilderFactory = PojoDescriptorBuilderFactoryImpl.getInstance();
+        PojoDescriptorBuilderFactory pojoDescriptorBuilderFactory = new LocalPojoDescriptorFactoryImpl();//PojoDescriptorBuilderFactoryImpl.getInstance();
         PojoDescriptorBuilder pojoDescriptorBuilder = pojoDescriptorBuilderFactory.createPrivateFieldDescriptorBuilder();
         StringBuffer buffer = new StringBuffer();
         List<String> schemasCreated = new ArrayList<String>();

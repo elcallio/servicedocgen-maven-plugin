@@ -21,7 +21,7 @@
 		<version>61</version>
 	</parent>
 	<artifactId>servicedocgen-maven-plugin-jakarta</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 	<name>Maven Service Documentation Generator Plugin</name>
 	<description>Plugin to generate documentation for services (JAX-RS).</description>
@@ -88,7 +88,7 @@
 		<dependency>
 			<groupId>net.sf.m-m-m</groupId>
 			<artifactId>mmm-util-core</artifactId>
-			<version>7.0.0</version>
+			<version>8.7.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
@@ -121,6 +121,17 @@
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
 			<version>2.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.m-m-m</groupId>
+			<artifactId>mmm-util-validation</artifactId>
+			<version>8.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.m-m-m</groupId>
+			<artifactId>mmm-util-entity</artifactId>
+			<version>8.7.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
