@@ -464,6 +464,8 @@ public class Analyzer
         }
 
         operationDescriptor.setHttpMethod( createHttpMethodDescriptor( method ) );
+        operationDescriptor.setId(operationDescriptor.getHttpMethod() + "_" + serviceDescriptor.getId() + "_" + operationDescriptor.getPath().replace('/', '_'));
+        
 
         // parameters
         for ( JParameter parameter : method.getParameters() )
